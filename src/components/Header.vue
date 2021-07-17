@@ -10,22 +10,18 @@
         <nav id="nav">
             <ul>
                 <li><a href="#one" class="active">About Me</a></li>
-                <li><a href="#two" class=''>Things I Can Do</a></li>
+                <li><a href="#two">Things I Can Do</a></li>
                 <li><a href="#three">A Few Accomplishments</a></li>
                 <li><a href="#four">Contact</a></li>
             </ul>
         </nav>
         <footer>
             <ul class="icons">
-                <li><a target="_blank" href="https://www.linkedin.com/in/stefan-markovic-801772212/" class="icon brands fa-linkedin">
-                    <span class="label">LinkedIn</span>
-                </a></li>
-                <li><a target="_blank" href="https://github.com/Shellharbour-Digital" class="icon brands fa-github">
-                    <span class="label">Github</span>
-                </a></li>
-                <li><a href="mailto:hello@stefanmarkovic.com" class="icon solid fa-envelope">
-                    <span class="label">Email</span>
-                </a></li>
+                <li v-for="social in socials" :key="social.name">
+                    <a :target="social.target" :href="social.url" :class="social.icon">
+                        <span class="label">{{ social.text }}</span>
+                    </a>
+                </li>
             </ul>
         </footer>
     </section>
@@ -39,7 +35,8 @@ export default {
   computed: {
     ...mapState({
       name: (state) => state.name,
-      headlines: (state) => state.headline,
+      headlines: (state) => state.headlines,
+      socials: (state) => state.socials,
     }),
   },
 };
