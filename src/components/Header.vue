@@ -1,8 +1,10 @@
 <template>
     <section id="header">
         <header>
-            <span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-            <h1 id="logo"><a href="#">{{ name }}</a></h1>
+            <span class="image avatar">
+                <img :src="person.image" :alt="'image of ' + person.name" />
+            </span>
+            <h1 id="logo"><a href="#">{{ person.name }}</a></h1>
             <p><span v-for="headline in headlines" :key="headline.text">
                 {{ headline.text }}<br />
             </span></p>
@@ -35,10 +37,10 @@ export default {
   name: 'Header',
   computed: {
     ...mapState({
-      name: (state) => state.name,
-      headlines: (state) => state.headlines,
-      nav: (state) => state.nav,
-      socials: (state) => state.socials,
+      person: (state) => state.header.person,
+      headlines: (state) => state.header.headlines,
+      nav: (state) => state.header.nav,
+      socials: (state) => state.header.socials,
     }),
   },
 };
