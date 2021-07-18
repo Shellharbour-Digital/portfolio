@@ -9,16 +9,17 @@
         </header>
         <nav id="nav">
             <ul>
-                <li><a href="#one" class="active">About Me</a></li>
-                <li><a href="#two">Things I Can Do</a></li>
-                <li><a href="#three">A Few Accomplishments</a></li>
-                <li><a href="#four">Contact</a></li>
+                <li v-for="(nav, index) in nav" :key="nav.text">
+                    <a :href="nav.href" :class="{ 'active' : index === 0 }">
+                        {{nav.text}}
+                    </a>
+                </li>
             </ul>
         </nav>
         <footer>
             <ul class="icons">
-                <li v-for="social in socials" :key="social.name">
-                    <a :target="social.target" :href="social.url" :class="social.icon">
+                <li v-for="social in socials" :key="social.text">
+                    <a :target="social.target" :href="social.href" :class="social.icon">
                         <span class="label">{{ social.text }}</span>
                     </a>
                 </li>
@@ -36,6 +37,7 @@ export default {
     ...mapState({
       name: (state) => state.name,
       headlines: (state) => state.headlines,
+      nav: (state) => state.nav,
       socials: (state) => state.socials,
     }),
   },
