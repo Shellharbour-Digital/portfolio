@@ -1,11 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
-/*
-	Read Only by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2196,6 +2191,7 @@ input, select, textarea {
 				border-radius: 100%;
 				display: block;
 				width: 100%;
+				background-color: #F0C3BF;
 			}
 
 		.image.main {

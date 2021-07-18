@@ -1,14 +1,16 @@
 <template>
     <section id="two">
         <div class="container">
-        <h3>Things I Can Do</h3>
+        <h3>{{ heading }}</h3>
         <p>
-            Integer eu ante ornare amet commetus vestibulum blandit integer
-            in curae ac faucibus integer non. Adipiscing cubilia elementum integer
-            lorem ipsum dolor sit amet.
+            <span v-for="paragraph in paragraphs" :key="paragraph.id">
+                {{ paragraph.text }}<br />
+            </span>
         </p>
         <ul class="feature-icons">
-            <li class="icon solid fa-code">Neque sit cep ante</li>
+            <li class="icon brands fa-js" style="font-family: Font Awesome 5 Brands">
+                JavaScript
+            </li>
             <li class="icon solid fa-cubes">Augue fusce morbi</li>
             <li class="icon solid fa-book">Cras augue cep vitae</li>
             <li class="icon solid fa-coffee">Augue enim dictum</li>
@@ -20,7 +22,15 @@
 </template>
 
 <script>
-export default {
+import { mapState } from 'vuex';
 
+export default {
+  name: 'Section Two',
+  computed: {
+    ...mapState({
+      heading: (state) => state.header.nav[1].text,
+      paragraphs: (state) => state.two.paragraphs,
+    }),
+  },
 };
 </script>
