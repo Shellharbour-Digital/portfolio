@@ -3,7 +3,7 @@ export default {
     person:
       {
         name: 'Stefan Markovic',
-        image: 'images/avatar.jpg',
+        image: 'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Gray02&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Light',
       },
     headlines: [
       { text: 'Web Developer' },

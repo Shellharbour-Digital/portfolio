@@ -5,123 +5,16 @@
     <div id="main">
 
       <!-- One -->
-        <section id="one">
-          <div class="image main" data-position="center">
-            <img src="images/banner.jpg" alt="" />
-          </div>
-          <div class="container">
-            <header class="major">
-              <h2>About Me</h2>
-              <p>Eget et adipiscing ornare vestibulum quam<br />
-              interdum blandit ut Adipiscing.</p>
-            </header>
-            <p>
-              Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col.
-              Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus
-              commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies
-              non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer
-              in curae ac faucibus integer non. Adipiscing cubilia elementum.
-            </p>
-          </div>
-        </section>
+        <app-section-one />
 
       <!-- Two -->
-        <section id="two">
-          <div class="container">
-            <h3>Things I Can Do</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer
-              in curae ac faucibus integer non. Adipiscing cubilia elementum integer
-              lorem ipsum dolor sit amet.
-            </p>
-            <ul class="feature-icons">
-              <li class="icon solid fa-code">Neque sit cep ante</li>
-              <li class="icon solid fa-cubes">Augue fusce morbi</li>
-              <li class="icon solid fa-book">Cras augue cep vitae</li>
-              <li class="icon solid fa-coffee">Augue enim dictum</li>
-              <li class="icon solid fa-bolt">Porttitor ante</li>
-              <li class="icon solid fa-users">Tempus risus consequat</li>
-            </ul>
-          </div>
-        </section>
+        <app-section-two />
 
       <!-- Three -->
-        <section id="three">
-          <div class="container">
-            <h3>A Few Accomplishments</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer
-              in curae ac faucibus integer non. Adipiscing cubilia elementum integer
-              lorem ipsum dolor sit amet.
-            </p>
-            <div class="features">
-              <article>
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-                <div class="inner">
-                  <h4>Pharetra fusce facilisis</h4>
-                  <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit integer
-                    in curae ac faucibus integer adipiscing ornare amet.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-                <div class="inner">
-                  <h4>Condimentum mus ipsum orci</h4>
-                                   <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit integer
-                    in curae ac faucibus integer adipiscing ornare amet.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-                <div class="inner">
-                  <h4>Cubilia enim congue at cep amet</h4>
-                                   <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit integer
-                    in curae ac faucibus integer adipiscing ornare amet.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
+        <app-section-three />
 
       <!-- Four -->
-        <section id="four">
-          <div class="container">
-            <h3>Contact Me</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer
-              in curae ac faucibus integer non. Adipiscing cubilia elementum integer
-              lorem ipsum dolor sit amet.
-            </p>
-            <form method="post" action="#">
-              <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall">
-                  <input type="text" name="name" id="name" placeholder="Name" />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <input type="email" name="email" id="email" placeholder="Email" />
-                </div>
-                <div class="col-12">
-                  <input type="text" name="subject" id="subject" placeholder="Subject" />
-                </div>
-                <div class="col-12">
-                  <textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
-                </div>
-                <div class="col-12">
-                  <ul class="actions">
-                    <li><input type="submit" class="primary" value="Send Message" /></li>
-                    <li><input type="reset" value="Reset Form" /></li>
-                  </ul>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
+        <app-section-four />
     </div>
 
   <!-- Footer -->
@@ -132,10 +25,18 @@
 
 <script>
 import AppFooter from '@/components/Footer.vue';
+import AppSectionOne from '@/components/SectionOne.vue';
+import AppSectionTwo from '@/components/SectionTwo.vue';
+import AppSectionThree from '@/components/SectionThree.vue';
+import AppSectionFour from '@/components/SectionFour.vue';
 
 export default {
   name: 'Home',
   components: {
+    AppSectionOne,
+    AppSectionTwo,
+    AppSectionThree,
+    AppSectionFour,
     AppFooter,
   },
   mounted() {
