@@ -17,7 +17,35 @@ export default {
     skills: [
       {
         text: 'JavaScript',
-        icon: '',
+        icon: 'icon brands fa-js',
+      },
+      {
+        text: 'React',
+        icon: 'icon brands fa-react',
+      },
+      {
+        text: 'Vue.js',
+        icon: 'icon brands fa-vuejs',
+      },
+      {
+        text: 'Node.js',
+        icon: 'icon brands fa-node',
+      },
+      {
+        text: 'Docker',
+        icon: 'icon brands fa-docker',
+      },
+      {
+        text: 'Git',
+        icon: 'icon brands fa-git-alt',
+      },
+      {
+        text: 'HTML5',
+        icon: 'icon brands fa-html5',
+      },
+      {
+        text: 'CSS3',
+        icon: 'icon brands fa-css3-alt',
       },
     ],
   },

@@ -1,8 +1,5 @@
 <template>
     <section id="one">
-        <div class="image main" data-position="center">
-        <img src="images/banner.jpg" alt="" />
-        </div>
         <div class="container">
         <header class="major">
             <h2>{{ heading }}</h2>
@@ -10,8 +7,8 @@
                 {{ headline.text }}<br />
             </span></p>
         </header>
-        <p>
-            {{ about }}
+        <p v-for="paragraph in paragraphs" :key="paragraph.id">
+            {{ paragraph.text }}
         </p>
         </div>
     </section>
@@ -26,7 +23,7 @@ export default {
     ...mapState({
       heading: (state) => state.header.nav[0].text,
       headlines: (state) => state.one.headlines,
-      about: (state) => state.one.about,
+      paragraphs: (state) => state.one.paragraphs,
     }),
   },
 };

@@ -2,20 +2,15 @@
     <section id="two">
         <div class="container">
         <h3>{{ heading }}</h3>
-        <p>
-            <span v-for="paragraph in paragraphs" :key="paragraph.id">
-                {{ paragraph.text }}<br />
-            </span>
+        <p v-for="paragraph in paragraphs" :key="paragraph.id">
+          {{ paragraph.text }}
         </p>
         <ul class="feature-icons">
-            <li class="icon brands fa-js" style="font-family: Font Awesome 5 Brands">
-                JavaScript
-            </li>
-            <li class="icon solid fa-cubes">Augue fusce morbi</li>
-            <li class="icon solid fa-book">Cras augue cep vitae</li>
-            <li class="icon solid fa-coffee">Augue enim dictum</li>
-            <li class="icon solid fa-bolt">Porttitor ante</li>
-            <li class="icon solid fa-users">Tempus risus consequat</li>
+          <li v-for="skill in skills" :key="skill.text"
+            :class="skill.icon"
+          >
+            {{ skill.text }}
+          </li>
         </ul>
         </div>
     </section>
@@ -30,6 +25,7 @@ export default {
     ...mapState({
       heading: (state) => state.header.nav[1].text,
       paragraphs: (state) => state.two.paragraphs,
+      skills: (state) => state.two.skills,
     }),
   },
 };
