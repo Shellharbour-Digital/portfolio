@@ -1,11 +1,9 @@
 <template>
     <section id="three">
         <div class="container">
-            <h3>A Few Accomplishments</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer
-              in curae ac faucibus integer non. Adipiscing cubilia elementum integer
-              lorem ipsum dolor sit amet.
+            <h3>{{ heading }}</h3>
+            <p v-for="paragraph in paragraphs" :key="paragraph.id">
+              {{ paragraph.text }}
             </p>
             <div class="features">
               <article>
@@ -44,7 +42,15 @@
 </template>
 
 <script>
-export default {
+import { mapState } from 'vuex';
 
+export default {
+  name: 'Section Three',
+  computed: {
+    ...mapState({
+      heading: (state) => state.header.nav[2].text,
+      paragraphs: (state) => state.three.paragraphs,
+    }),
+  },
 };
 </script>
