@@ -6,33 +6,14 @@
               {{ paragraph.text }}
             </p>
             <div class="features">
-              <article>
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+             <article v-for="project in projects" :key="project.title">
+                <a :href="project.url" target="_blank" class="image">
+                  <img :src="project.image" :alt="project.alt" />
+                </a>
                 <div class="inner">
-                  <h4>Pharetra fusce facilisis</h4>
+                  <h4>{{ project.title }}</h4>
                   <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit integer
-                    in curae ac faucibus integer adipiscing ornare amet.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-                <div class="inner">
-                  <h4>Condimentum mus ipsum orci</h4>
-                                   <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit integer
-                    in curae ac faucibus integer adipiscing ornare amet.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-                <div class="inner">
-                  <h4>Cubilia enim congue at cep amet</h4>
-                                   <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit integer
-                    in curae ac faucibus integer adipiscing ornare amet.
+                    {{ project.text }}
                   </p>
                 </div>
               </article>
@@ -50,6 +31,7 @@ export default {
     ...mapState({
       heading: (state) => state.header.nav[2].text,
       paragraphs: (state) => state.three.paragraphs,
+      projects: (state) => state.three.projects,
     }),
   },
 };
