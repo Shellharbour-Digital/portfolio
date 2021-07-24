@@ -1810,6 +1810,10 @@ input, select, textarea {
 		padding: 0;
 	}
 
+	.form-error-text {
+		color: #db6a60 !important;
+	}
+
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -2666,9 +2670,20 @@ input, select, textarea {
 			width: 48%;
 		}
 
+		.features article .image:hover {
+			filter: brightness(65%);
+			-webkit-filter: brightness(65%);
+			-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-o-transition: all 1s ease;
+			-ms-transition: all 1s ease;
+			transition: all 1s ease;
+		}
+
 			.features article .image img {
 				display: block;
 				width: 100%;
+				border: solid 1px #777;
 			}
 
 		.features article .inner {

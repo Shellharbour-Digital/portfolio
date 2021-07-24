@@ -14,6 +14,10 @@
                   <h4>{{ project.title }}</h4>
                   <p>
                     {{ project.text }}
+                    <br/>
+                    <a target="_blank" :href="project.git" class="icon brands fa-github">
+                      <span class="label">Github</span>
+                    </a>
                   </p>
                 </div>
               </article>
